@@ -14,6 +14,7 @@ div.container {
 }
 
 .cell {
+  position:relative;
   background-color:white;
   padding:10px;
   height:220px;
@@ -26,15 +27,55 @@ div.container {
   border-radius:3px;
 }
 
-img {
-  height:170px;
-  width:98%;
+.cell:hover {
+  box-shadow:3px black;
 }
+
+img {
+  height:180px;
+}
+
 div.title {
   white-space:nowrap;
   text-decoration:none;
+  text-align:left;
   color:#666666;
-  font-size:14px;
+  font-size:13px;
   overflow:hidden;
   text-overflow:ellipsis;
+  font-family:arial;
+}
+
+div.title:hover {
+  text-decoration:underline;
+}
+div a {
+  text-decoration:none;
+}
+
+.shop {
+  position:absolute;
+  font-family:Helvetica;
+  font-size:12px;
+  bottom:6px;
+  left:12px;
+}
+
+.shop a {
+  text-decoration:none;
+  color:#b2b2b6;
+}
+
+.shop a:hover {
+  text-decoration:underline;
+}
+
+.price {
+  color:#78C042;
+  font-size:13px;
+  display:inline-block;
+  position:absolute;
+  right:12px;
+  bottom:6px;
+  font-family:arial;
 }
