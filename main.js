@@ -2488,11 +2488,17 @@ var searchResults = {
 
 var items = searchResults.results;
 
+var currencySymbol = {
+  USD:"&dollar;",
+  GBP:"&pound;",
+};
+
 items.forEach(function(i){
+
   var shopurl = i.Shop.url;
   var shopName = i.Shop.shop_name;
   var imgurl = i.Images[0].url_170x135;
 
   $(".container").append(
-    "<a href="+ i.url +"><div class='cell'><img src='"+ imgurl +"'/>" +"<div class='title'>" + i.title + "</div><div class='shop'><a href="+ shopurl +">"+ shopName +"</a></div><div class='price'>$"+ i.price +" " + i.currency_code +"</div></div></a>");
+    "<a href="+ i.url +"><div class='cell'><img src='"+ imgurl +"'/>" +"<div class='title'>" + i.title + "</div><div class='shop'><a href="+ shopurl +">"+ shopName +"</a></div><div class='price'>"+ currencySymbol[i.currency_code] + i.price +" " + i.currency_code +"</div></div></a>");
 });
